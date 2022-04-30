@@ -1,4 +1,6 @@
 //  make dynamic html pages in nodejs with folder and with html extentsion 
+// first create public folder and html page inside this folder.
+
 const express=require('express');
 const apps=express();
 const path=require('path');
