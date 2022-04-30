@@ -3,6 +3,8 @@
 
 // create public folder and html page inside this it.require path or run on browser 
 
+// created 404 page logic condition code also
+
 const express = require('express');
 const apps = express();
 const path = require('path');
