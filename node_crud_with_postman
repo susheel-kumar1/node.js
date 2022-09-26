@@ -1,0 +1,20 @@
+app.get('/dataset', async (req, resp) => {
+    let data = await dbconnect();
+    data = await data.find().toArray();
+    console.log(data)
+    resp.send(data)
+})
+
+
+app.post('/dataset', async (req, resp) => {
+    let dattt = await dbconnect();
+    let reee = await dattt.insertOne(req.body);
+    resp.send(reee);
+})
+
+app.put('/dataset', async (req, resp) => {
+    let dattt = await dbconnect();
+    let reee = await dattt.updateOne({name:req.body.name},
+    {$set:req.body});
+    resp.send(reee);
+})
